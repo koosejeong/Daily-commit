@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {display:flex; justify-content:center; align-items:center; height:100ch; margin:0; padding:0; background-color:#333;}
+        ul {display:flex; margin:0; padding:0;}
+        ul li {position:relative; list-style:none; width:20px; height:20px; margin:0 20px; border-radius:50%; transition:0.5s; cursor:pointer; background-color:#777;}
+        ul li:hover {background-color:#86ff3b; box-shadow:0 0 0 4px #333, 0 0 0 6px #86ff3b;}
+        ul li .content {position:absolute; bottom:55px; width:400px; padding:20px; box-sizing:border-box; border-radius:4px; background-color:#fff; visibility:hidden; opacity:0; transition:0.5s; transform:translate(-50%, -50px);}
+        ul li .content:before {content:''; position:absolute; left:calc(50% - 20px); bottom:-15px; width:30px; height:30px; transform:rotate(45deg); background-color:#fff;}
+        ul li:hover .content {visibility:visible; opacity:1; transform:translate(-50%, 0px);}
+        ul li .content h2 {margin:0; padding:0;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <div class="content">
+                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                <p>Soluta distinctio corporis repellat, praesentium porro optio esse atque voluptates beatae corrupti sint in aliquam officia maxime illum reiciendis at eius facere</p>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                <p>Soluta distinctio corporis repellat, praesentium porro optio esse atque voluptates beatae corrupti sint in aliquam officia maxime illum reiciendis at eius facere</p>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                <p>Soluta distinctio corporis repellat, praesentium porro optio esse atque voluptates beatae corrupti sint in aliquam officia maxime illum reiciendis at eius facere</p>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
