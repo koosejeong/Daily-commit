@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/common.css">
+    <title>Daily-study_afternoon STARBUCKS landing page</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="./images/logo.png"  class="logo" alt=""></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's new</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee <br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ratione odit neque optio distinctio nihil necessitatibus sunt, quas voluptates corrupti quis magnam molestiae, reprehenderit voluptatum totam sit? Eveniet facilis explicabo ratione? Ad ducimus molestiae cum eaque accusantium harum quas fugit.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="./images/img1.png" class="starbucks" alt="">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./images/thumb1.png" alt="" onclick="imgSlider('./images/img1.png'); changeCircleColor('#017143')"></li>
+            <li><img src="./images/thumb2.png" alt="" onclick="imgSlider('./images/img2.png'); changeCircleColor('#eb7495')"></li>
+            <li><img src="./images/thumb3.png" alt="" onclick="imgSlider('./images/img3.png'); changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="./images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="./images/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="./images/instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+    <script src="./src/js/common.js"></script>
+</body>
+</html>
