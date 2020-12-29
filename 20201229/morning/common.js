@@ -7,10 +7,10 @@ console.log(count);
 function countLetters() {
     var txt = textarea.value;
     var txtLength = txt.length;
-    count.innterHTML = `${txtLength}`;
+    count.innerHTML = `${txtLength}`;
 }
 
 
-textarea.addEventListener('keypress', () => {
+textarea.addEventListener('keyup', () => {
     countLetters();
 })
