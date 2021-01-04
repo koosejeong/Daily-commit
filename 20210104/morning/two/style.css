@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+* {margin:0; padding:0; box-sizing:border-box;}
+section {display:flex; justify-content:center; align-items:center; position:relative; width:100%; height:100vh; overflow:hidden;}
+header {display:flex; justify-content:space-between; z-index:100; position:absolute; top:0; left:0; width:100%; padding:40px 100px;}
+header .logo {position:relative; font-size:2em; font-weight:700; color:#fff; text-transform:uppercase; text-decoration:none; text-shadow:2px 2px 0 rgba(0,0,0, .1); transition:.5s;}
+header .toggle {display:flex; justify-content:center; align-items:center; position:relative; width:40px; height:40px; background:url(./contents/images/menu.png) no-repeat center; background-size:30px; cursor:pointer;}
+header .toggle::before {content:'Menu'; position:absolute; right:45px; padding:2px 5px; text-transform:uppercase; color:#111; letter-spacing:2px; font-size:14px; background-color:#fff;}
+header .toggle.active {background:url(./contents/images/close.png) no-repeat center; background-size:25px; cursor: pointer;}
+header .toggle.active::before {content:'Close';}
+
+.glass {z-index:1; position:absolute; top:0; left:0; width:50%; height:100%; backdrop-filter: blur(15px); box-shadow:10px 0 15px rgba(0,0,0, .1); transition:.5s; transition-delay:1s;}
+section.active .glass {width:100%; backdrop-filter: blur(20px); box-shadow:10px 0 15px rgba(0,0,0, .5); transition-delay:0s;}
+
+section .content {z-index:10; position:relative; text-align:center; transition:.5s; transition-delay:1s;}
+section.active .content {opacity:0; visibility:hidden; transform:translateX(-200px); transition-delay:0s;}
+section .content h2 {position:relative; color:#fff; font-size:10vw; line-height:0.55em; text-shadow:0 5px 5px rgba(0,0,0, .2); font-family: 'Dancing Script', cursive;}
+section .content h2 span {padding:0 10px; background-color:#fff; color:#111; font-size:0.2em; font-weight:300; letter-spacing:5px; text-shadow:0 5px 5px rgba(0,0,0, 0); box-shadow:0 5px 5px rgba(0,0,0, .2); font-family:initial;}
+
+section video {display:flex; justify-content:space-between; align-items:center;position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;}
+
+section .sci {display:flex; z-index:100; position:absolute; bottom:40px; right:100px;}
+section.active .sci li {opacity:0; visibility:hidden; transform:translateY(100px);}
+section .sci li {margin:5px; padding:0 6px; background-color:#fff; list-style:none;  transition:.5s; transition-delay:calc(.2s * var(--i));}
+section .sci li a {display:inline-block; color:#111; text-decoration:none; letter-spacing:2px; font-size:12px; font-weight:500; text-transform:uppercase;}
+
+section .navigation {z-index:100; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
+section .navigation li {margin:15px 0; list-style:none; text-align:center; opacity:0; visibility:hidden; transition:.5s; transform:translateX(200px); transition-delay:calc(.2s * var(--i));}
+section.active .navigation li {opacity:1; visibility:visible; transform:translateX(0);}
+section .navigation li a {display:block; padding:4px 10px; background-color:#fff; color:#111; font-size:1.5em; font-weight:300; letter-spacing:4px; text-decoration:none; text-transform:uppercase;}
+section .navigation li a:hover {background-color:#111; color:#fff; letter-spacing:10px; text-transform:lowercase;}
+
+@media (max-width:768px) {
+    header {padding:20px;}
+    section .sci {bottom:20px; right:20px;}
+    .glass {width:50%;}
+    section .content h2 {font-size:18vw;}
+    section .content h2 span {padding:0 5px; font-size:.25em; letter-spacing:2px;}
+}
