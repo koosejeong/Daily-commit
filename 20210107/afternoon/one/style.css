@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
+
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; font-family:'Poppins', sans-serif; scroll-behavior:smooth}
+section {position:relative;}
+/* img {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;} */
+.heading {margin-bottom:10px; color:#fff; font-size:30px; font-weight:600; letter-spacing:1px;}
+.text {color:#fff; font-size:16px; font-weight:300; letter-spacing:1px;}
+
+.banner {display:flex; justify-content:center; align-items:center; position:relative; width:100%; height:100vh; background-color:#3475ca;}
+.banner img {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:.25;}
+.banner .content {position:relative; max-width:750px; text-align:center;}
+/* .banner .content h2 {color:#fff; font-size:18px;} */
+.banner header {display:flex; z-index:1000; justify-content:space-between; align-items:center; position:absolute; top:0; left:0; width:100%; padding:40px 100px;}
+.banner header .logo {color:#fff; font-size:24px; font-weight:700; text-decoration:none; text-transform:uppercase; letter-spacing:1px;}
+.banner header .toggle {position:relative; width:36px; height:28px; background:url(./images/toggle.png) no-repeat center; background-size:cover; cursor:pointer;}
+
+.about {display:flex; position:relative; width:100%;}
+.about .contentBox {width:50%; padding:100px; background-color:#162c3b;}
+.about .imgBox {width:50%; background:url(./images/window.jpg) no-repeat center; background-size:cover;}
+
+.services {padding:100px; background-color:#12222d; text-align:center;}
+.services .container {display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; width:100%; margin-top:60px;}
+.services .container .serviceBox {display:flex; z-index:1; justify-content:center; align-items:center; position:relative; width:350px; height:400px; background-color:#fff;}
+.services .container .serviceBox img {max-width:100px;}
+.services .container .serviceBox span {display:block; font-size:20px; font-weight:500; letter-spacing:1px;}
+
+.technology {display:flex; justify-content:space-between; align-items:center; width:100%;padding:100px; padding-top:300px; margin-top:-300px; background-color:#3f8ffc;}
+.technology .contentBox {max-width:800px;}
+.technology .imgBox {max-width:250px;}
+.technology .imgBox img {max-width:100%;}
+
+.client {padding:100px; background-color:#162c3b; text-align:center;} 
+.client .imgBox {display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-top:40px;}
+.client .imgBox img {max-width:200px; margin:20px; opacity:.25; cursor:pointer;}
+.client .imgBox img:hover {opacity:1;}
+
+.testimonials {position:relative; padding:100px; background-color:#12222d; text-align:center;}
+.testimonials .container {display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-top:40px;}
+.testimonials .container .contentBox {display:flex; justify-content:center; align-items: center; width:550px; padding:60px 50px; background-color:#fff; text-align:left;}
+.testimonials .container .contentBox p {font-style:italic;}
+.testimonials .container .contentBox h3 {width:100%; color:#3f8ffc; text-align:end;}
+
+.contact {padding:100px; background-color:#162c3b; text-align:center;}
+.aboutImgBox {background:url(./images/bg2.jpg) center; background-size:cover; width:50%;}
+.redbg {background:url(./images/red.jpg) !important; background-position:center; background-size:cover;}
+.form .inputBox {margin-bottom:40px;}
+.form .inputBox input {width:100%; padding:10px 0; background-color:transparent; box-shadow:none; border:none; outline:none; font-size:18px; font-weight:300; color:#fff; border-bottom:2px solid #fff;}
+.form .inputBox input::placeholder {color:#fff;}
+.form .inputBox textarea {width:100%; min-height:150px; padding:10px 0; background-color:transparent; box-shadow:none; border:none; outline:none; font-size:18px; font-weight:300; color:#fff; border-bottom:2px solid #fff;}
+.form .inputBox textarea::placeholder {color:#fff;}
+.form .inputBox input[type="submit"] {width:150px; background-color:#fff; color:#111; cursor:pointer; font-weight:400;}
+
+.footer {display:flex; justify-content:space-between; align-items:center; padding:20px 100px; background-color:#162c3b;}
+.footer ul {display:flex; justify-content:center; align-items:center;}
+.footer ul li a {display:inline-block; margin:0 10px; text-decoration:none;}
+.footer ul li a img {max-width:20px; filter:invert(1);}
+
+@media (max-width:1440px) {
+    .testimonials {padding:50px;}
+    .testimonials .container .contentBox {width:calc(50% - 50px);}
+    .services {padding:50px;}
+    .services .container {justify-content:center; margin-top:20px;}
+    .services .container .serviceBox {width:calc(33.3333% - 20px); height:350px; margin:20px;}
+} 
+
+@media (max-width:768px) {
+    .banner header {padding:20px 50px;}
+    .banner .content h2 {font-size:36px;}
+    .banner .content p {font-size:16px;}
+    .about {flex-direction:column;}
+    .about .contentBox,
+    .about .imgBox {width:100%; min-height:400px; padding:50px; text-align:center;}
+    .services {padding:50px;}
+    .services .container {justify-content:center; margin-top:20px;}
+    .services .container .serviceBox {width:300px; height:350px; margin:20px;}
+    .technology {justify-content:center; flex-direction:column; padding:50px; padding-top:300px;}
+    .technology .imgBox {max-width:250px; margin-top:40px;}
+    .client {padding:50px;}
+    .client .imgBox {justify-content:center;}
+    .testimonials {padding:50px;}
+    .testimonials .container {justify-content:center;}
+    .testimonials .container .contentBox {width:initial; max-width:550px; margin-bottom:40px; padding:60px 40px;}
+    .testimonials .container .contentBox:last-child {margin-bottom:0;}
+    .contact {padding:50px;}
+    .footer {padding:20px 50px; flex-direction:column-reverse; text-align:center;}
+    .footer ul {margin-bottom:20px;}
+
+}
