@@ -11,5 +11,6 @@ window.addEventListener('scroll', function(){
         blurElem.classList.add('effect');
     } else if(scrollPos <= 200) {
         blurElem.classList.remove('effect');
+
     }
 });
