@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif;}
+
+.container {position:relative; max-width:1440px; min-height:100vh; padding:0 100px; margin:0 auto;}
+.container::before {content:''; z-index:-2; position:absolute; top:0; right:0; width:350px; height:100%; background-color:#333;}
+.container::after {content:'Healthy'; z-index:-2; position:absolute; bottom:0; left:0; font-size:18vw; font-weight:700; color:#000; opacity:.04;;}
+
+header {display:flex; justify-content:space-between; align-items:center; padding:30px 0;}
+header .logo {color:#333; font-size:30px; font-weight:700; text-decoration:none; text-transform:uppercase;}
+header .logo span {color:#78ff00;}
+header ul {display:flex; position:relative;}
+header ul li {margin:0 20px; list-style:none;}
+header ul li a {position:relative; padding:4px 10px; color:#333; font-size:18px; text-decoration:none;}
+header ul li:nth-child(3) a,
+header ul li:nth-child(4) a {color:#fff;}
+header ul li a::before {content:''; z-index:-1; position:absolute; top:0; left:0; width:0; height:100%; background-color:#75ff00; transition:.5s ease-in-out;}
+header ul li a:hover::before,
+header ul li a.active::before {width:40px;}
+.menuIcon {display:none;}
+
+.content {display:flex; justify-content:space-between; align-items:center; margin-top:50px;}
+.content .bannerTxt {position:relative; max-width:500px; margin-right:50px;}
+.content .bannerTxt div {display:none;}
+.content .bannerTxt div.active {display:initial;}
+.content .bannerTxt h2 {font-size:54px; color:#333; font-weight:800; text-transform:uppercase; line-height:1.2em;}
+.content .bannerTxt p {margin:20px 0; color:#333; font-size:18px; line-height:1.8em;}
+.content .bannerTxt a {display:inline-block; position:relative; padding:15px; color:#333; font-size:18px; font-weight:700; text-transform:uppercase; text-decoration:none; letter-spacing:1px;}
+.content .bannerTxt a::before {content:''; z-index:-1; position:absolute; top:0; left:0; width:60px; height:100%; background-color:#78ff00; transition:.5s ease-in-out;}
+.content .bannerTxt a:hover::before {width:100%;}
+.content .bannerImg {position:relative; width:440px; height:440px; background-color:#000;}
+.content .bannerImg img {position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; object-fit:cover; transition:.5s;}
+.content .bannerImg img.active {opacity:1;}
+
+.icons {display:flex; justify-content:space-between; align-items:center; padding:50px 0;}
+.icons .sci,
+.icons .controls {display:flex; position:relative;}
+.icons .sci li {margin-right:30px; list-style:none;}
+.icons .sci li img {display:inline-block; max-height:24px; transition:.5s ease-in-out;}
+.icons .sci li:hover img {transform:translateY(-10px);}
+.icons .controls li {margin-left:20px; list-style:none; cursor:pointer; filter:invert(1); transition:.5s ease-in-out;}
+.icons .controls li:hover {opacity:.5;}
+
+
+@media (max-width:767px) {
+    .container {max-width:767px; padding:20px 50px;}
+    .container::before {display:none;}
+
+    header {padding:0;}
+    header ul {display:none; flex-direction:column; z-index:1000; position:fixed; top:85px; left:0; width:100%; height:100vh; padding:100px 0; background-color:#fff;}
+    header .mobMenu.active {display:initial;}
+    header ul li {padding:20px; text-align:center;}
+    header ul li a {font-size:36px;}
+    header ul li:nth-child(3) a,
+    header ul li:nth-child(4) a {color:#333;}
+    header ul li a:hover::before,
+    header ul li a.active::before {width:100%;}
+
+    .menuIcon {display:block; position:fixed; right:50px; width:34px; height:34px; padding:8px; background:#fff url(./images/menu.png) no-repeat center; background-size:cover; cursor:pointer;}
+    .menuIcon.active {background:url(./images/close.png) center;}
+
+    .icons .controls li {margin-left:20px; filter:invert(0);}
+
+    .content {flex-direction:column-reverse; min-height:500px; margin-top:0;}
+    .content .bannerTxt {max-width:100%; height:40vh; margin-right:0;}
+    .content .bannerTxt h2 {font-size:30px;}
+    .content .bannerTxt p {height:100px; overflow-y:scroll;}
+    .content .bannerImg {width:100%; height:40vh; margin:20px 0;}
+    
+}
