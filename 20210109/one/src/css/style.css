@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; text-decoration:none; font-family: 'Poppins', sans-serif;}
+.inner {position:relative; width:100%; max-width:1440px; margin:0 auto;}
+
+section {display:flex; justify-content:space-between; align-items:center; position:relative; min-height:100vh; padding:0 100px 100px; background-color:#0062be; transition:.5s;}
+
+header {display:flex; justify-content:space-between; align-items:center; position:absolute; top:50px; left:50%; transform:translateX(-50%); width:100%; max-width:1440px;}
+header .logo {position:relative; max-width:80px;}
+header ul {display:flex; position:relative;}
+header ul li {list-style:none;}
+header ul li a {display:inline-block; margin-left:40px; color:#fff; font-weight:400;}
+
+.content {display:flex; justify-content:space-between; align-items:center; position:relative; width:100%;}
+.content .txtBox {position:relative; max-width:600px;}
+.content .txtBox h2 {color:#fff; font-size:4em; font-weight:900; text-transform:uppercase; line-height:1.5em;}
+.content .txtBox p {color:#fff;}
+.content .txtBox a {display:inline-block; margin-top:20px; padding:8px 20px; background-color:#fff; border-radius:40px; color:#111; font-weight:500; letter-spacing:1px; text-transform:uppercase;}
+
+.content .imgBox {display:flex; justify-content:flex-end; width:600px; margin-top:50px; padding-right:50px;}
+.content .imgBox img {max-width:260px;}
+
+.thumb {position:absolute; left:50%; bottom:20px; transform:translateX(-50%);}
+.thumb li {display:inline-block; margin:0 20px; cursor:pointer; transition:.5s;}
+.thumb li:hover {transform:translateY(-15px);}
+.thumb li img {max-width:40px;}
+
+
+.sci {display:flex; flex-direction:column; justify-content:center; align-items:center; position:absolute; top:50%; right:30px; transform:translateY(-50%);}
+.sci li {list-style:none;}
+.sci li img {display:inline-block; margin:5px 0; filter:invert(1); transform:scale(.6);}

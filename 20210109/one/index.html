@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>2021년 1월 9일 펩시콜라 프로모션 페이지 만들기</title>
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="./images/logo.png" alt="펩시콜라 로고" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Wat's new</a></li>
+                <li><a href="#">New seletter</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header> 
+        <div class="inner">
+            <div class="content">
+                <div class="txtBox">    
+                    <h2>That's What <br><span>I like</span></h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus aliquid, fuga quaerat magnam dolores architecto deserunt facere fugiat cumque at enim eligendi nobis assumenda excepturi molestiae? Adipisci, ipsa quos.</p>
+                    <a href="#">View All Products</a>
+                </div>
+                <div class="imgBox">
+                    <img src="./images/pepsi001.png" alt="pepsi 01" class="pepsi">
+                </div>
+            </div>       
+        </div>
+        <ul class="thumb">
+            <li class="sel"><img src="./images/pepsi001.png" alt="product thumb nail image" onclick="imgSlider('./images/pepsi001.png');"></li>
+            <li class="sel"><img src="./images/pepsi002.png" alt="product thumb nail image" onclick="imgSlider('./images/pepsi002.png');"></li>
+            <li class="sel"><img src="./images/pepsi003.png" alt="product thumb nail image" onclick="imgSlider('./images/pepsi003.png');"></li>
+        </ul>
+        <ul class="sci">
+            <li><img src="./images/facebook.png" alt="facebook"></li>
+            <li><img src="./images/twitter.png" alt="twitter"></li>
+            <li><img src="./images/instagram.png" alt="instagram"></li>
+        </ul>
+    </section>
+    <script src="./src/js/common.js"></script>
+</body>
+</html>
