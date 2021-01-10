@@ -1,21 +1,28 @@
-// let listSel = document.querySelectorAll('.sel>img');
-
-// console.log(listSel);
+const listSel = document.querySelectorAll('li.sel');
+const sec = document.querySelector('.sec');
+let idx = 0;
+const colorList = [
+    bgFirst ='#0062be',
+    bgSecound = '#e60c2c',
+    bgThird = '#1e1e1e'
+]
+console.log(listSel);
 
 function imgSlider(any) {
     document.querySelector('.pepsi').src = any;
 }
 
-// function changeColor
-
-// listSel.forEach(function(list){
-//     list.addEventListener('click', function(list){
-//         if(this === 0) {
-//             document.querySelector('.pepsi').src = './images/pepsi001.png';
-//         } else if(this === 1) {
-//             document.querySelector('.pepsi').src = './images/pepsi002.png';          
-//         } else {
-//             document.querySelector('.pepsi').src = './images/pepsi003.png';  
-//         }
-//     })
-// })
+  listSel.forEach(function (list) {
+      list.addEventListener('click', function (event) {
+        const selLi = event.target.parentNode;
+        imgSlider(event.target.src);
+        // console.log(selLi.classList.contains('sel00'));
+        if (selLi.classList.contains('sel00')) {
+          sec.style.backgroundColor = colorList[0];      
+        } else if (selLi.classList.contains('sel01')) {
+          sec.style.backgroundColor = colorList[1];
+        } else {
+          sec.style.backgroundColor = colorList[2];
+        }
+    })
+  })

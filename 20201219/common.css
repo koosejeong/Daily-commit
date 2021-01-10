@@ -1,0 +1,3 @@
+body {height:100%; background-color:#1D1F20;}
+.wrap {display:flex; justify-content:center; align-items:center;}
+.loading {text-align: center; transform: rotate(-90deg);}
