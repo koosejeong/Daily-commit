@@ -2,12 +2,34 @@
 
 * {margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif;}
 
+button {opacity:0; border:0; background:transparent;}
+
 .open {z-index:1000; position:fixed; top:0; left:0; right:0; bottom:0;}
 .open .layer {position:absolute; top:0; left:0; width:100%; height:100%; transform-origin:top; animation:open 1s ease-in-out forwards;}
 .open .layer:nth-child(1) {z-index:2; background-color:#000;}
 .open .layer:nth-child(2) {z-index:1; animation-delay:1s; background-color:#03a9fa;}
 
-section {display:flex; justify-content:space-between; align-items:center; position:absolute; width:100%; max-width:1440px; height:100%; margin:0 auto; background-color:#fff;}
+section {display:flex; justify-content:space-between; align-items:center; position:absolute; width:100%; height:100%; background-color:#fff; overflow:hidden;}
+
+header {display:flex; justify-content:space-between; align-items:center; z-index:1010; position:absolute; top:0; left:0; width:100%; height:80px; padding:0 10%;}
+header .logo {font-size:2em; animation:fadeInRight .5s linear forwards; animation-delay:2s;  opacity:0;}
+header ul {display:flex;}
+header ul li {margin:0 10px; list-style:none; animation:fadeInRight .5s linear forwards; opacity:0;} 
+header ul li:nth-child(1),
+.sci li:nth-child(1) {animation-delay:5s;}
+header ul li:nth-child(2),
+.sci li:nth-child(2) {animation-delay:5.25s;}
+header ul li:nth-child(3),
+.sci li:nth-child(3) {animation-delay:5.5s;}
+header ul li:nth-child(4),
+.sci li:nth-child(4) {animation-delay:5.75s;}
+header ul li:nth-child(5) {animation-delay:6s;}
+header ul li:nth-child(6) {animation-delay:6.25s;}
+header ul li:last-child {margin-right:0;}
+header ul li a {padding:5px 10px; margin:0; background-color:#fff; color:#000; font-size:1.2em; text-decoration:none; letter-spacing:2px;}
+header ul li a.active,
+header ul li a:hover {background-color:#000; color:#fff;}
+
 .bannerTxt {position:absolute; top:50%; left:10%; transform:translateY(-50%); max-width:800px;}
 .bannerTxt h2, 
 .bannerTxt h3 {display:inline-block; position:relative; margin:0; padding:0; transform-origin:left; transform:scaleX(0); text-transform:uppercase; animation:revealTextReverse 1s ease-in-out forwards;}
@@ -17,9 +39,60 @@ section {display:flex; justify-content:space-between; align-items:center; positi
 .bannerTxt h3::before {content:''; position:absolute; top:0; left:0;  width:100%; height:100%; background-color:#000; transform-origin:right; animation:revealText 1s ease-in-out forwards; animation-delay:3s;}
 .bannerTxt h3::before {animation-delay:4s;}
 .bannerTxt p {animation:fadeIn 1s linear forwards; animation-delay:5s; font-size:1.2em; font-weight:400; opacity:0;}
-.bannerTxt a {display:inline-block; margin:20px 0 0; padding:10px 20px; background-color:#000; color:#fff; font-size:1.2em; font-weight:700; text-decoration:none; letter-spacing:1px; animation:fadeInBottom .5s linear forwards; animation-delay:5.5s; opacity:0;}
+.bannerTxt .read-more {display:inline-block; margin:20px 0 0; padding:10px 20px; background-color:#000; color:#fff; font-size:1.2em; font-weight:700; text-decoration:none; letter-spacing:1px; animation:fadeInBottom .5s linear forwards; animation-delay:5.5s; opacity:0;}
 
-.bannerImg {position:absolute; right:10%; top:50%; transform:translateY(-50%); margin-left:50px; animation:fadeIn 1s linear forwards; animation-delay:6s; opacity:0;}
+.bulb {position:absolute; right:10%; top:50%; transform:translateY(-50%); margin-left:50px; animation:fadeIn 1s linear forwards; animation-delay:6s; opacity:0;}
+
+.sci {display:flex; flex-direction:column; position:absolute; right:30px; bottom:15px;}
+.sci li {margin:5px 0; list-style:none; text-align:center; opacity:0; animation:fadeInBottom .5s linear forwards; animation-delay:5s;}
+.sci li a {color:#000; font-size:1.2em;}
+
+.element1 {position:absolute; right:40%; bottom:-150px; width:250px; height:250px; border:40px solid #000; animation:rotate 40s linear infinite, fadeIn 1s linear forwards; animation-delay:7s; opacity:0;}
+.element2 {position:absolute; left:-10px; top:40%; width:50px; height:50px; border:2px solid #000; animation:rotate 30s linear infinite, fadeIn 1s linear forwards; animation-delay:7s;opacity:0;}
+
+
+@media (max-width:1440px) {
+    section {display:initial; height:auto; padding:100px;}
+
+    header {padding:0 50px;}
+    header .logo {font-size:1.5em;}
+    header ul li {margin:0 5px;}
+    header ul li a {font-size:1em;}
+
+    .bannerTxt {z-index:1001; position:relative; top:0; left:0; max-width:700px; margin-top:100px; transform:translateY(0);}
+    .bannerTxt h2 {font-size:4em;}
+    .bannerTxt h3 {font-size:2.5em;}
+    .sci {z-index:1002; right:20px;}
+}
+
+@media (max-width:768px) {
+
+    button {opacity:1; animation:posi 2s ease-in-out forwards; font-size:25px;}
+
+    header .closeBtn {position:absolute; top:10px; right:50px; animation-duration:0s;}
+    header .nav {display:none; flex-direction:column; justify-content:center; align-items:center; z-index:1020; position:fixed; top:0; left:0; right:0; bottom:0; background-color:#fff; overflow-y:scroll;}
+    header .nav.show {display:flex;}
+    header ul li {margin:10px 0;}
+    header ul li:nth-child(1), 
+    header ul li:nth-child(2), 
+    header ul li:nth-child(3), 
+    header ul li:nth-child(4), 
+    header ul li:nth-child(5), 
+    header ul li:nth-child(6) {animation-delay:0s;}
+
+
+    .bannerTxt h2 {font-size:3em;}
+    .bannerTxt h3 {font-size:1.5em;}
+    .element1 {display:none;}
+
+}
+
+@media (max-width:360px) { 
+    section {padding:30px;}
+}
+
+
+/* ================================================================================== */
 
 @keyframes open {
     0% {transform:scaleY(1)}
@@ -49,5 +122,34 @@ section {display:flex; justify-content:space-between; align-items:center; positi
     100% {
         transform:translateY(0);
         opacity:1;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        transform:translateX(150px);
+        opacity:0;
+    }
+    100% {
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+@keyframes rotate{
+    0% {
+        transform:rotate(45deg);
+    }
+    100% {
+        transform:rotate(405deg);
+    }
+}
+
+@keyframes posi {
+    0% {
+        transform:translateX(9999px);
+    }
+    100% {
+        transform:translateX(30px);
     }
 }
