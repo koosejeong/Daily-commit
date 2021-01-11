@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:'Poppins', sans-serif;}
+
+.inner {max-width:1440px; margin:0 auto;}
+
+header {z-index:10; position:absolute; top:0; left:0; width:100%; padding:15px 50px; background-color:#5b639c;}
+header .inner {display:flex; justify-content:space-between; align-items:center;}
+header .logo {position:relative; color:#fff; font-size:1.5em; font-weight:600;}
+header .nav {display:flex; justify-content:center; flex-wrap:wrap; margin:10px 0;}
+header .nav li {margin:0 10px;}
+header .nav li a {color:#fff; font-weight:500; letter-spacing:1px;}
+header .nav li a:hover {color:#ffeb3b;}
+header .search {position:relative; width:300px; height:40px;}
+header .search input {position:absolute; top:0; left:0; width:100%; height:100%; padding:0 10px 0 45px; background:transparent; color:#fff; outline:none; border:1px solid #fff; border-radius:4px;}
+header .search input::placeholder {color:#fff;}
+header .search .fa-search {position:absolute; top:50%; left:10px; transform:translateY(-50%); padding-right:10px; color:#fff; border-right:1px solid #fff;}
+
+section {background-color:#434978;}
+section .inner {min-height:100vh; padding:200px 50px 100px;}
+.banner {display:flex; justify-content:space-between; align-items:center;}
+.banner .content {max-width:700px;}
+.banner .content h2 {color:#fff; font-size:3em;}
+.banner .content p {color:#fff; font-size:1em;}
+.banner .content a {display:inline-block; margin-top:20px; padding:8px 20px; background-color:#fff; color:#434978; font-weight:600;} 
+
+.banner .imgBox {margin-left:30px; filter:invert(1);}
+
+
+@media (max-width:768px) {
+
+    .inner {max-width:100.0000vw;}
+
+    header {padding:10px 20px;}
+    header .inner {flex-direction:column;}
+
+    section {overflow:hidden;}
+    section .inner {padding:150px 20px 50px;}
+    .banner {flex-direction:column-reverse;}
+    .banner .content h2 {font-size:2em;}
+    .banner .imgBox {max-width:80%; margin:30px 0 0 0;}
+    .banner .imgBox img {width:100%;}
+}
+
+@media (max-width:360px) {
+        header .search {width:100%;}
+}
