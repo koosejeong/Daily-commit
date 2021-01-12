@@ -1,0 +1,8 @@
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:consolas;}
+
+body {min-height:100vh;}.inner {display:flex; justify-content:center; align-items:center; max-width:1440px; min-height:100vh; margin:0 auto;}
+
+nav {display:flex; position:relative;}
+nav a {position:relative; margin:0 20px; color:#111; font-size:2em;}
+nav .marker {position:absolute; left:0; bottom:-8px; width:0; height:4px; background-color:#111; border-radius:4px; transition:.5s;}
