@@ -1,0 +1,13 @@
+
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:'consolas'; user-select:none;}
+
+section {background-color:#f8f8f8;}
+.inner {display:flex; justify-content:center; align-items:center; max-width:1440px; height:100vh; margin:0 auto;}
+
+.inputBox {position:relative; width:450px;}
+.inputBox h2 {color:#333; font-size:28px;}
+.inputBox input {position:relative; width:100%; height:60px; margin:15px 0 20px; padding:0 20px; background:transparent; border:none; border-radius:8px; outline:none; color:#333; font-size:24px; letter-spacing:4px; box-shadow:-4px -4px 10px rgba(255,255,2555,1), inset 4px 4px 10px rgba(0,0,0, .05), inset -4px -4px 10px rgba(255,255,255,1), 4px 4px 10px rgba(0,0,0, .05);}
+.inputBox input::placeholder {letter-spacing:0;}
+.inputBox .btn {display:inline-block; position:relative; padding:10px 15px; background-color:#333; border-radius:8px; color:#fff; font-size:24px; cursor:pointer;}
+.inputBox .btn:active {background-color:#9c27b0;}
