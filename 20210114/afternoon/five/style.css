@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:'consolas';font-family:'Poppins', sans-serif;}
+/* font-family:'Poppins', sans-serif; */
+
+
+.inner {display:flex; flex-wrap:wrap; justify-content:center; align-items:center; max-width:1440px; min-height:100vh; margin:0 auto;}
+/* section {background-color:#111;} */
+.box {position:relative; width:200px; height:200px; margin:10px; overflow:hidden;}
+.box .imgBox {position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.9);}
+.box .imgBox.act {z-index:1000; position:fixed; top:0; left:0; width:100%; height:100%;}
+.box .imgBox img {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;}
+.box .imgBox.act img {position:absolute; top:50px; left:50px; bottom:50px; right:50px; width:calc(100% - 100px); height:calc(100% - 100px);}
+.box .imgBox h2 {opacity:0; visibility:hidden;}
+.box .imgBox.act h2 {margin-top:15px; opacity:1; visibility:visible; text-align:center; color:#fff; font-size:16px; font-weight:300; letter-spacing:4px;}
+
+.box .imgBox .content {position:absolute; bottom:50px; right:50px; left:50px; transform:translateY(100%); padding:20px; opacity:0; visibility:hidden; background:rgba(0,0,0, .8); color:#fff;}
+.box .imgBox.act .content {transform:translateY(0);opacity:1; visibility:visible; transition:.5s;} 
+.box .imgBox .content h3 {font-size:24px; font-weight:600;}
