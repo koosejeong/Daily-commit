@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:'Poppins', sans-serif;}
+/* font-family:'Poppins', sans-serif; */
+
+body {background:linear-gradient(#7d6cfc, #c635ea);}
+.inner {max-width:1440px; min-height:100vh; margin:0 auto;} 
+.action {position:fixed; bottom:50px; left:50px; width:50px; height:50px; background-color:#fff; border-radius:50%; box-shadow:0 5px 5px 5px rgba(0,0,0, .1); cursor:pointer;}
+.action span {display:flex; justify-content:center; align-items:center; position:relative; width:100%; height:100%; color:#a13dea; font-size:2em; transition:.3s ease-in-out;}
+.action.active span {transform:rotate(135deg);}
+
+.action ul {position:absolute; bottom:55px; min-width:250px; padding:20px; background-color:#fff; border-radius:20px; visibility:hidden; opacity:0; transition:.3s;}
+.action.active ul {bottom:70px; visibility:visible; opacity:1; transition:.3s;}
+.action ul li {display:flex; justify-content:flex-start; align-items:center; padding:10px 0; transition:.3s;}
+.action ul li:hover {font-weight:600;}
+.action ul li:not(:last-child) {border-bottom:1px solid rgba(0,0,0,.1);}
+.action ul li:nth-child(1) img {margin-right:30px;}
+.action ul li img {margin-right:10px; opacity:.2; transform:scale(.8);}
+.action ul li:hover img {opacity:.8;}
