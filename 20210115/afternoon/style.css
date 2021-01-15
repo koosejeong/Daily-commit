@@ -1,0 +1,13 @@
+
+.inner {max-width:1440px; margin:0 auto;}
+
+section {min-height:1500px; background-color:#000;}
+
+.temp {position:relative; width:100%; height:100vh; overflow:hidden;}
+.temp ul {display:flex; width:500%; height:100%; left:-100%; transition:.5s;}
+.temp ul li {width:calc(100% / 5);}
+.temp ul li img {width:100%; height:100%; object-fit:cover;}
+
+.temp .btn-area {display:flex; position:absolute; bottom:50px; right:50px;}
+.temp .btn-area .btn {display:block; color:#fff; font-size:30px;}
+.temp .btn-area .btn.next {margin-left:20px;}
