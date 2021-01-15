@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:'Poppins', sans-serif;}
+
+section {}
+header {position:absolute; top:0; left:0; width:100%; padding:0 100px; background-color:#262626;}
+header .logo {float:left; height:50px; color:#fff; font-size:24px; font-weight:700; line-height:50px;;} 
+header nav {float:right;}
+header nav ul {display:flex;}
+header nav ul li a {display:block; height:50px; padding:0 20px; color:#fff; line-height:50px;}
+header nav ul li {position:relative;}
+header nav ul li.sub-menu::before {content:'\f0d7'; position:absolute; right:5px; font-family:fontAwesome; line-height:50px; color:#fff;}
+header nav ul li.sub-menu.act::before {content:'\f0d8';}
+header nav ul li ul {display:none; position:absolute; left:0; background-color:#333;}
+header nav ul li.act ul {display:block;}
+header nav ul li ul li {display:block; width:200px; text-align:center;}
+header nav ul li a:hover,
+header nav ul li a.act {color:#fff; background-color:#2196f3;}
+
+.menu-toggle {display:none;float:right; color:#fff; font-size:24px; line-height:50px; cursor:pointer;}
+
+section img {width:100%; height:100vh; object-fit:cover;}
+
+@media (max-width:768px) {
+    header {padding:0 20px;}
+    header nav {position:absolute; top:50px; left:-100%; width:100%; height:calc(100vh - 50px); background-color:#333; transition:.5s;}
+    header nav.act {left:0;}
+    header nav ul {display:block; text-align:center;}
+    header nav ul li a {border-bottom:1px solid rgba(0,0,0,.2);}
+    .menu-toggle {display:block;}
+
+    header nav ul li.act ul {position:relative; background-color:#003e6f;}
+    header nav ul li.sub-menu::before {right:35%; transform:translateX(-50%);}
+    header nav ul li ul li {width:100%;}
+
+}
+
