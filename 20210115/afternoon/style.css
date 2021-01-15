@@ -4,7 +4,7 @@
 section {min-height:1500px; background-color:#000;}
 
 .temp {position:relative; width:100%; height:100vh; overflow:hidden;}
-.temp ul {display:flex; width:500%; height:100%; left:-100%; transition:.5s;}
+.temp ul {display:flex; width:500%; height:100%; transform:translateX(-20%); transition:.5s;}
 .temp ul li {width:calc(100% / 5);}
 .temp ul li img {width:100%; height:100%; object-fit:cover;}
 

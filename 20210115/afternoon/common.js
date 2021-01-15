@@ -25,7 +25,8 @@ btn.forEach(slide => slide.addEventListener('click', (clk) => {
         console.log(idx);
         idx--;
         if(idx < 0 ){
-            idx = len - 1;
+            idx = len - 2;
+            list.style.marginLeft = -100 * idx + '%';
         }
     } 
     list.style.marginLeft = -100 * idx + '%';    
@@ -39,7 +40,7 @@ temp.addEventListener('mouseout', function(){
 })
 
 function move(){
-    if(idx >= len) return;
+    if(idx >= len - 1) return;
         idx++;
         list.style.marginLeft = -100 * idx + '%';
     if(idx === len - 1)
