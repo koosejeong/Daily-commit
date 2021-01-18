@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:'Poppins', sans-serif;}
+
+.scene {position:relative; width:100%; height:100vh; background:linear-gradient(#111425,#3751e0); background-attachment:fixed; overflow:hidden;}
+.moon {z-index:1000; position:absolute; top:100px; left:400px; width:100px; height:100px; background-color:#fff; border-radius:50%;}
+.moon::after {content:''; position:absolute; top:-15px; left:15px; width:100%; height:100%; border-radius:50%; background:linear-gradient(#111425,#3751e0); background-attachment:fixed;}
+
+.forest {z-index:1000; position:absolute; bottom:0; left:0; width:100%; transform:scale(1.2);}
+
+.scene i {position:absolute; background-color:#fff; border-radius:50%; animation:animate linear infinite;}
+
+.cloud1 {z-index:10000; position:absolute; top:0; left:0; max-width:600px; animation:cloud 50s linear infinite;}
+.cloud2 {z-index:10000; position:absolute; top:0; left:0; max-width:500px; animation:cloud 35s linear infinite;}
+.cloud3 {z-index:10000; position:absolute; top:0; left:0; max-width:600px; animation:cloud 80s linear infinite;}
+.cloud4 {z-index:10000; position:absolute; top:200px; left:0; max-width:300px; animation:cloud 70s linear infinite; animation-delay:-20s;}
+.cloud5 {z-index:10000; position:absolute; top:150px; left:0; max-width:500px; animation:cloud 40s linear infinite; animation-delay:-5s;}
+.cloud6 {z-index:10000; position:absolute; top:75px; left:0; max-width:400px; animation:cloud 30s linear infinite; animation-delay:-10s;}
+
+@keyframes animate {
+    0% {
+        opacity:0;
+        transform:translateY(0);
+    }
+    10%,90% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+        transform:translateY(-100px);
+    }
+}
+
+@keyframes cloud {
+    0% {
+        transform:translateX(-100%) scale(1);
+    }
+    100% {
+        transform:translateX(400%) scale(1.5);
+    }
+}
