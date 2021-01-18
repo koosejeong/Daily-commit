@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:'Poppins', sans-serif;}
+
+.inner {max-width:1440px; margin:0 auto;}
+
+.banner {display:flex; justify-content:center; align-items:center; position:relative; width:100%; height:100vh; background:url(./images/bg.jpeg) no-repeat bottom; background-size:cover;}
+.banner .txt {position:relative; color:#fff; font-size:12em;}
+.banner .clouds {position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; pointer-events:none;}
+.banner .clouds img {position:absolute; bottom:0; max-width:100%; animation:animate calc(3s * var(--i)) linear infinite;}
+
+.container {position:relative; padding:75px 100px;}
+.container h2 {position:relative; margin-bottom:20px; font-size:2.5em;}
+
+@keyframes animate {
+    0% {
+        opacity:0;
+        transform:scale(1);
+    }
+    25% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+        transform:scale(3);
+    }
+}
