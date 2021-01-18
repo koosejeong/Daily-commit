@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:'Poppins', sans-serif;}
+
+body {width:100%; height:100vh; 
+    background:repeating-linear-gradient(0deg, #fff 0%, #fff 50%, #000 50%, #000 100%), repeating-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); background-size:50px 50px; background-blend-mode:difference; overflow:hidden;}
+
+span {display:block; position:absolute; width:150px; height:150px; background:url(./img/bus.jpeg) no-repeat center; background-size:cover; background-attachment:fixed; pointer-events:none; border-radius:50%;}
