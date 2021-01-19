@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:'Poppins', sans-serif;}
+
+body {display:flex; justify-content:center; align-items:center; min-height:100vh; background-color:#06181f;}
+.container {display:flex; justify-content:space-between; align-items:center; position:relative; width:800px;}
+.container .icon {width:200px;}
+.container .icon path {fill:transparent; stroke-width:10; stroke:#31e8ff;}
+.container .icon.heart path {stroke-dasharray:1560; stroke-dashoffset:0;}
+.container .icon.heart:hover path {animation:animate-heart 2s linear forwards;}
+.container .icon.star path {stroke-dasharray:1810; stroke-dashoffset:0;}
+.container .icon.star:hover path {animation:animate-star 2s linear forwards;}
+.container .icon.moon path {stroke-dasharray:1560; stroke-dashoffset:0;}
+.container .icon.moon:hover path {animation:animate-moon 2s linear forwards;}
+
+@keyframes animate-heart {
+    0% {
+        stroke-dashoffset:0;
+    }
+    40% {
+        stroke-dashoffset:1560;        
+    }
+    80% {
+        stroke-dashoffset:3120;
+        fill:transparent;        
+    }
+    100% {
+        stroke-dashoffset:3120;
+        fill:#31e8ff;        
+    }
+}
+@keyframes animate-star {
+    0% {
+        stroke-dashoffset:0;
+    }
+    40% {
+        stroke-dashoffset:1810;        
+    }
+    80% {
+        stroke-dashoffset:3620;
+        fill:transparent;        
+    }
+    100% {
+        stroke-dashoffset:3620;
+        fill:#31e8ff;        
+    }
+}
+@keyframes animate-moon {
+    0% {
+        stroke-dashoffset:0;
+    }
+    40% {
+        stroke-dashoffset:1560;        
+    }
+    80% {
+        stroke-dashoffset:3120;
+        fill:transparent;        
+    }
+    100% {
+        stroke-dashoffset:3120;
+        fill:#31e8ff;        
+    }
+}
