@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:'Poppins', sans-serif;}
+
+section {display:flex; justify-content:center; align-items:center; min-height:100vh; background-color:#0d0f1b; overflow:hidden;}
+ul {display:flex; flex-direction:column; position:relative;}
+ul li::before {content:attr(data-text); position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); color:#fff; font-size:6em; font-weight:700; letter-spacing:20px; white-space:nowrap; pointer-events:none; transition:.5s; opacity:0;}
+ul li:hover::before {opacity:.05; letter-spacing:0;}
+ul:hover li a {opacity:0;}
+ul li a {z-index:1; display:inline-block; position:relative; padding:6px 15px; background-color:#2196f3; color:#fff; text-transform:uppercase; letter-spacing:2px; overflow:hidden; transition:.5s;}
+ul li a:hover {z-index:1000; background-color:#ff3f81; transform:scale(1.4); opacity:1;}
+ul li a::before {content:''; position:absolute; top:0; left:-100px; width:80px; height:100%; background:linear-gradient(90deg, transparent, rgba(255,255,244, .8), transparent); transform:skewX(35deg); transition:0s;}
+ul li a:hover::before {left:calc(100% + 100px); transition:.5s; transition-delay:.2s;}
