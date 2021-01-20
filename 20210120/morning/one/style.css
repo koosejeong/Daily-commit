@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:'Poppins', sans-serif;}
+
+.container {position:relative; width:100vw; height:100vh; overflow:hidden;}
+.container::before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(45deg, rgba(0,0,0,1), rgba(0,0,0,.7));}
+.slider-temp {z-index:0; position:absolute; top:0; left:0; width:100%; height:100%;}
+.slider-temp > div {display:flex; justify-content:center; align-items:center; z-index:1; position:absolute; top:0; left:0; width:100%; height:100%;}
+.slider-temp > div > div {overflow:hidden; box-shadow:0 0  61px 0 rgba(167, 130, 130, 0.62);}
+.slider {display:grid; grid-template-columns:repeat(7, 100%); width:800px; height:450px;}
+.img {position:relative; overflow:hidden;}
+.img img {position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:100%;}
+
+.content {z-index:999; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:800px; height:450px;}
+.content::before {content:''; position:absolute; left:0; bottom:0; width:100%; height:17%; background:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.8)); }
+.btn {position:absolute; top:50%; transform:translateY(-50%); padding:1rem 1.2rem; border-radius:5px; background-color:#ddd; outline:none; border:none; cursor:pointer; transition:.3s; opacity:.5;}
+#prev {left:5%;}
+#next {right:5%;}
+.btn:hover {opacity:.8;}
+ul {display:flex; position:absolute; bottom:2%; left:50%; transform:translateX(-50%);}
+ul li {width:18px; height:18px; margin:.3rem; border:2.5px solid #2ecc71; border-radius:50%; cursor:pointer;}
+ul li.color-red {background-color:#2ecc71;}
+
+.background {z-index:-1; position:absolute; top:0; left:0; width:100%; height:100%;}
+.bg {position:absolute; top:50%; left:50%; transform:translate(-50%, -50%) scale(1.2); width:120%; transition:.5s; opacity:0;}
+.bg.show {opacity:1;}
