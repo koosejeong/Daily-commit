@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@700&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:'Poppins', sans-serif;}
+
+section {background-color:#111;}
+.inner {max-width:1440px; min-height:100vh; margin:0 auto;}
+
+h2 {margin:0 3rem; color:#fff; font-size:3rem; font-weight:50; text-align:center; font-family: 'Hind', sans-serif;}
+.styling {font-weight:800; color:lime;}
+.input-temp {display:flex; justify-content:center; align-items:center; text-align:center;}
+.input-temp .input {width:450px; height:50px; margin:.25rem; padding:.5rem 1rem; background-color:#fff; font-size:1.15rem; border-radius:25px; border:none; outline:none;}
+
+.add {width:50px; height:50px; margin:.25rem; border-radius:25px; background-color:lime; color:#fff; border:none; outline:none; cursor:pointer;}
+.add:hover {opacity:.7;}
+
+.container {display:flex; flex-direction:column; justify-content:center; align-items:center; margin-top:2rem; text-align:center;}
+.item {padding:.5rem; margin-bottom:1.5rem; border-bottom:4px solid #fff;}
+.input-item {width:350px; background:none; outline:none; border:none; color:#fff; font-size:1.4rem;}
+
+.edit {margin:0 .5rem; background:none; outline:none; border:none; color:lime; font-size:1.4rem; font-family: 'Hind', sans-serif;}
+.remove {margin:0 .5rem; background:none; outline:none; border:none; color:#e00; font-size:1.4rem; font-family: 'Hind', sans-serif;}
