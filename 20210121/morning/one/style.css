@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; list-style:none; text-decoration:none; font-family:'Poppins', sans-serif;}
+
+
+section {background-color:#efefef;}
+.container {display:flex; justify-content:center; align-items:center; min-height:100vh; padding:20px;}
+.card {position:relative; width:400px; background-color:#fff; border-radius:5px; box-shadow:0 5px 15px 1px rgba(0,0,0,.1);}
+.card::before {content:''; position:absolute; top:0; left:0; width:100%; height:270px; background-image:linear-gradient(to top, #00f2fe, #4fcafe); clip-path:circle(400px at 50% -48.5%); overflow:hidden;}
+.header {position:relative; height:265px;}
+.mail {z-index:3; position:absolute; top:1rem; right:2rem; font-size:1.5rem; color:#fff; opacity:.8; transition:.3s;}
+.mail:hover {opacity:1;}
+.menu {z-index:3; position:absolute; top:1.4rem; left:1.9rem; width:21px; height:16px; cursor:pointer; opacity:.8;}
+.menu:hover {opacity:1;}
+.menu::before, .menu::after {content:''; position:absolute; width:100%; height:2px; border-radius:1px; background-color:#fff;}
+.menu::before {top:0;}
+.menu::after {bottom:0;}
+.menu .center {position:absolute; top:50%; transform:translateY(-50%); width:70%; height:2px; background-color:#fff; border-radius:1px;}
+
+.main {display:flex; flex-direction:column; justify-content:center; align-items:center; position:absolute; top:0; left:0; width:100%; height:100%;}
+.main .image {width:110px; height:110px; margin-bottom:2px; border-radius:50%; background:url(./img/profile.jpg) no-repeat center; background-size:cover; border:4px solid #00d8fe; overflow:hidden; cursor:pointer;}
+.image .hover {display:flex; justify-content:center; align-items:center; position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(79,172,254,.7); color:#fff; transition:.5s; opacity:0;}
+.image:hover .hover {opacity:1;}
+.name {margin:5px 0; color:#fff; font-size:1.3rem; font-weight:500; line-height:1;}
+.sub-name {color:#fff; font-family:'Cutive Mono', monospace; font-size:1.2rem; opacity:.8;}
