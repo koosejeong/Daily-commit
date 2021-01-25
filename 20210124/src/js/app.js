@@ -8,7 +8,7 @@ class App {
         section.appendChild(this.canvas);
         this.ctx = this.canvas.getContext('2d');
 
-        this.pixelRatio = window.devicePixelRatio > 1 ? 2 : 1;
+        this.pixelRatio = window.devicePixelRatio > 1 ? 2 : 1; 
 
         window.addEventListener('resize', this.resize.bind(this), false);
         this.resize();
@@ -32,16 +32,17 @@ class App {
        this.ctx.scale(this.pixelRatio, this.pixelRatio);
 
        this.Polygon = new Polygon (
-           this.stageWidth / 2,
-           this.stageHeight + (this.stageHeight / 4),
-           this.stageHeight / 1.5,
-           15
+           this.stageWidth / 2, //x
+           this.stageHeight + (this.stageHeight / 4), //y
+           this.stageHeight / 1.5, //r
+           15 //sides
        );
     }
 
     animate() {
         window.requestAnimationFrame(this.animate.bind(this));
         this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
+        // clearRect need four argument x, y, w, h
 
         this.moveX *= 0.92;
         this.Polygon.animate(this.ctx, this.moveX);
@@ -57,6 +58,7 @@ class App {
         if (this.isDown) {
             this.moveX = e.clientX - this.offsetX;
             this.offsetX = e.clientX;
+
         }
     }
 

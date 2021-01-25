@@ -22,7 +22,7 @@ export class Polygon {
         this.x = x;
         this.y = y;
         this.r = radius;
-        this.sides = sides;
+        this.sides = sides; //15 (in app.js new Polygon argument)
         this.rotate = 0;
     }
 
@@ -54,11 +54,13 @@ export class Polygon {
                 const x2 = 160 * Math.cos(angle2 * j);
                 const y2 = 160 * Math.sin(angle2 * j);
                 (j == 0) ? ctx.moveTo(x2, y2) : ctx.lineTo(x2, y2);
+                // moveTo(arg, arg) : 펜을 지정된 좌표(arg(1), arg(2))로 옮긴다
+                // lineTo(arg, arg) : 현재의 드로잉 위치에서 arg(1)와 arg(2)로 지정된 위치까지 line draw
 
             }
             ctx.fill();
             ctx.closePath();
-            ctx.restore();
+            ctx.restore(); //불러오기
         }
 
         // ctx.fill();
