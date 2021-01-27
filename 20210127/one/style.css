@@ -1,0 +1,9 @@
+* {margin:0; padding:0; box-sizing:border-box; list-style:none;}
+
+section {display:flex; justify-content:center; align-items:center; position:relative; width:100%; height:100vh;}
+section .slider {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;}
+section .navgation {z-index:100; display:flex; justify-content:center; align-items:center; position:absolute; bottom:40px; left:50%; transform:translateX(-50%);}
+section .navgation li {margin:10px; cursor:pointer;}
+section .navgation li img {width:150px; border:4px solid #fff; border-radius:4px;}
+
+section h2 {z-index:100; position:relative; max-width:1000px; color:#fff; font-size:4em; text-align:center; text-shadow:0 5px 10px rgba(0,0,0,.2);}
