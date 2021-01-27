@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; text-decoration:none; font-family: 'Poppins', sans-serif; text-decoration:none; list-style:none;}
+.inner {position:relative; width:100%; max-width:1440px; margin:0 auto;}
+
+section {min-height:100vh;}
+section header {z-index:1000; display:flex; justify-content:space-between; align-items:center; position:fixed; top:0; left:0; width:100%; padding:30px 100px;}
+header .logo {position:relative; color:#fff; font-size:2em; font-weight:700;}
+header ul {display:flex; justify-content:center; align-items:center; position:relative;}
+header ul li {position:relative; margin-left:40px;}
+header ul li a{color:#fff;}
+
+.banner {position:relative; width:100%; min-height:100vh;}
+.banner .imgBox {position:absolute; top:0; left:0; width:100%; height:100%;}
+.banner .imgBox img {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; background-position:center; opacity:0; transition:.5s;}
+.banner .imgBox img.act {opacity:1;}
+
+.txtBox {position:absolute; bottom:0; width:800px; padding-left:100px;}
+.txtBox div {display:none; width:100%; padding:0 100px; box-sizing:border-box;}
+.txtBox div.act {display:block; background-color:rgba(0,0,0,.2);}
+.txtBox div h2 {padding-top:50px; color:#fff; font-size:2em;}
+.txtBox div p {height:100px; margin-top:50px; color:#fff; font-size:1.1em;}
+.txtBox div a {display:inline-block; padding:10px 30px; margin-top:10px; color:#111; font-size:1.1em; font-weight:500; background-color:#fff; letter-spacing:2px; text-transform:uppercase;}
+
+.crtls {position:absolute; top:50%; right:0; transform:translateY(-50%); width:80px;}
+.crtls li {display:flex; justify-content:center; align-items:center; position:relative; width:80px; height:80px; background-color:#fff; cursor:pointer;}
+.crtls li:hover {background-color:#ffeb3b;}
+.crtls li::before {content:''; position:absolute; width:20px; height:20px; border-left:3px solid #111; border-bottom:3px solid #111; transform:rotate(45deg);}
+.crtls li:nth-child(2)::before {transform:rotate(225deg);}
