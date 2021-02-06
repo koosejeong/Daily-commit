@@ -34,7 +34,7 @@ class App {
         this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight); //이전에 그려진 애니메이션 프레임을 지워주는 부분
 
         this.block.draw(this.ctx);
-        this.ball.draw(this.ctx, this.stageWidth, this.stageHeight);
+        this.ball.draw(this.ctx, this.stageWidth, this.stageHeight, this.block);
 
     }
 }

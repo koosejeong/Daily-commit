@@ -48,7 +48,7 @@ export class Ball {
             const x1 = Math.abs(minX - this.x);
             const x2 = Math.abs(this.x - maxX);
             const y1 = Math.abs(minY - this.y);
-            const y2 = Math.abs(this.y - maxY);
+            const y2 = Math.abs(minY - maxY);
             const min1 = Math.min(x1, x2);
             const min2 = Math.min(y1, y2);
             const min = Math.min(min1, min2);
