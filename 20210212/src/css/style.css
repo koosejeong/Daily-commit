@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; }
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #2196f3; }
+  section .btn {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #fff;
+    color: #03a9f4;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: .5s; }
+    section .btn:hover {
+      letter-spacing: 4px; }
+  section .popup {
+    z-index: 1000;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    padding: 80px 50px 50px;
+    background-color: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: .5s;
+    visibility: hidden; }
+    section .popup .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      width: 100%; }
+      section .popup .container img {
+        max-width: 80px; }
+      section .popup .container h2 {
+        margin: 20px 0 10px;
+        color: #333;
+        font-size: 24px;
+        font-weight: 500; }
+      section .popup .container p {
+        color: #333;
+        font-size: 16px;
+        text-align: center; }
+      section .popup .container .inputBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        margin-top: 20px; }
+        section .popup .container .inputBox input {
+          width: 100%;
+          padding: 15px;
+          outline: none;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          font-size: 18px; }
+        section .popup .container .inputBox input[type="submit"] {
+          max-width: 150px;
+          background-color: #03a9f4;
+          color: #fff;
+          border: none;
+          font-size: 18px;
+          font-weight: 500;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          text-decoration: none;
+          transform: .5s; }
+          section .popup .container .inputBox input[type="submit"]:hover {
+            letter-spacing: 4px; }
+    section .popup .close {
+      position: absolute;
+      top: 30px;
+      right: 30px; }
+      section .popup .close img {
+        max-width: 30px; }
+    section .popup.act {
+      top: 50%;
+      visibility: visible; }

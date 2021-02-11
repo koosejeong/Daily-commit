@@ -1,0 +1,121 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
+
+
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+
+section {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  background-color:#2196f3;
+
+  & .btn {
+    display:inline-block;
+    padding:15px 20px;
+    background-color:#fff;
+    color:#03a9f4;
+    font-size:18px;
+    font-weight:500;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    text-decoration:none;
+    transform:.5s;
+
+    &:hover {
+      letter-spacing:4px;
+    }
+  }
+
+  & .popup {
+    z-index:1000;
+    position:fixed;
+    top:-100%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:450px;
+    padding:80px 50px 50px;
+    background-color:#fff;
+    box-shadow:0 15px 30px rgba(0,0,0, .08);
+    transition:.5s;
+    visibility:hidden;
+
+    & .container {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      position:relative;
+      width:100%;
+
+      & img {
+        max-width:80px;
+      } //img
+
+      & h2 {
+        margin:20px 0 10px;
+        color:#333;
+        font-size:24px;
+        font-weight:500;
+      } //h2
+
+      & p {
+        color:#333;
+        font-size:16px;
+        text-align:center;
+      }
+
+      & .inputBox {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        position:relative;
+        width:100%;
+        margin-top:20px;
+
+        & input{
+          width:100%;
+          padding:15px;
+          outline:none;
+          border:1px solid rgba(0,0,0, .2);
+          font-size:18px;
+        }
+
+        & input[type="submit"] {
+          max-width:150px;
+          background-color:#03a9f4;
+          color:#fff;
+          border:none;
+          font-size:18px;
+          font-weight:500;
+          letter-spacing:2px;
+          text-transform:uppercase;
+          text-decoration:none;
+          transform:.5s;
+
+          &:hover {
+            letter-spacing:4px;
+          }
+        }
+      }
+
+    } //conteiner
+
+
+    & .close {
+      position:absolute;
+      top:30px;
+      right:30px;
+
+      & img {
+        max-width:30px;
+      }
+    }
+
+    &.act {
+      top:50%;
+      visibility:visible;
+    }
+  } //popup
+}
