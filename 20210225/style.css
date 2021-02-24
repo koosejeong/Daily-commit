@@ -1,0 +1,22 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+
+.container {position:relative; width:100%; height:100vh; overflow:auto; scroll-behavior:smooth; scroll-snap-type:y mandatory;}
+.sec {display:flex; justify-content:center; align-items:center; position:relative; width:100%; height:100vh; background-color:#f00; scroll-snap-align:center;}
+.sec:nth-child(9) {background:#B9062F url(./images/bg01.jpeg); background-size:cover; background-attachment:fixed; background-position:center center; background-repeat:no-repeat; background-blend-mode:multiply;}
+.sec:nth-child(2) {background:#1E821E url(./images/bg02.jpeg); background-size:cover; background-attachment:fixed; background-position:center center; background-repeat:no-repeat; background-blend-mode:multiply;}
+.sec:nth-child(3) {background:#FFD73C url(./images/bg03.jpeg); background-size:cover; background-attachment:fixed; background-position:center center; background-repeat:no-repeat; background-blend-mode:multiply;}
+.sec:nth-child(4) {background:#8878CD url(./images/bg04.jpeg); background-size:cover; background-attachment:fixed; background-position:center center; background-repeat:no-repeat; background-blend-mode:multiply;}
+.sec:nth-child(5) {background:#289AFF url(./images/bg05.jpeg); background-size:cover; background-attachment:fixed; background-position:center center; background-repeat:no-repeat; background-blend-mode:multiply;}
+.sec:nth-child(6) {background:#FFA01E url(./images/bg06.jpeg); background-size:cover; background-attachment:fixed; background-position:center center; background-repeat:no-repeat; background-blend-mode:multiply;}
+.sec:nth-child(7) {background:#FACD87 url(./images/bg07.jpeg); background-size:cover; background-attachment:fixed; background-position:center center; background-repeat:no-repeat; background-blend-mode:multiply;}
+.sec:nth-child(8) {background:#FFC7AD url(./images/bg08.jpg); background-size:cover; background-attachment:fixed; background-position:center center; background-repeat:no-repeat; background-blend-mode:multiply;}
+
+h3 {margin:0 50px; color:#fff; font-size:10vw; text-align:center;} 
+
+.content {position:absolute; top:0; width:100%; text-align:center;}
+.content h4 {display:flex; justify-content:center; position:relative;}
+.content h4 span {position:sticky; top:0; height:100vh; margin-top:calc(100vh * var(--i)); color:#fff; font-size:14vw; line-height:100vh;}
+
