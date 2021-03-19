@@ -1,0 +1,45 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif;}
+section {display:flex; justify-content:center; align-items:center; position:relative; min-height:100vh; padding:20px; background-color:#557085; transition:.5s;}
+section.act {background:#3e3f39;}
+section .container {position:relative; width:800px; height:500px; background-color:#fff; box-shadow:0 15px 50px rgba(0,0,0, .1);}
+section .container .user {display:flex; position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden;}
+section .container .user .imgBox {position:relative; width:50%; height:100%; transition:.5s;}
+section .container .user .imgBox img {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;}
+
+section .container .user .formBox {display:flex; flex-direction:column; justify-content:center; position:relative; width:50%; height:100%; padding:40px; background-color:#fff; transition:.5s;}
+section .container .user .formBox h2 {width:100%; margin-bottom:10px; color:#555; font-size:18px; font-weight:600; text-transform:uppercase; text-align:center;}
+section .container .user .formBox input {width:100%; padding:10px; margin:8px 0; background-color:#f5f5f5; color:#333; border:none; outline:none; box-shadow:none; font-size:14px; font-weight:300; letter-spacing:1px;}
+section .container .user .formBox input[type="submit"] {max-width:100px; background-color:#677eff; color:#fff; font-size:14px; font-weight:500; letter-spacing:1px; cursor:pointer; transition:.5s;}
+
+section .container .user.signUpBox .formBox input[type="submit"] {background-color:#e73e49;}
+
+section .container .user .formBox .signup {position:relative; margin-top:20px; font-size:12px; font-weight:300; letter-spacing:1px; color:#555;}
+section .container .user .formBox .signup a {color:#577eff; font-weight:600; text-decoration:none; text-transform:uppercase;text-transform:uppercase;}
+
+section .container .signUpBox {pointer-events:none;}
+section .container.act .signUpBox {pointer-events:initial;}
+section .container .signUpBox .formBox {top:100%;}
+section .container.act .signUpBox .formBox {top:0;}
+section .container .signUpBox .imgBox {top:-100%; transition:.5s;}
+section .container.act .signUpBox .imgBox {top:0;}
+
+section .container .signBox .formBox {top:0;}
+section .container.act .signBox .formBox {top:100%;}
+
+section .container .signBox .imgBox {top:0; transition:.5s;}
+section .container.act .signBox .imgBox {top:-100%;}
+
+
+@media (max-width:768px) {
+    section .container {max-width:400px;}
+    section .container .imgBox {display:none;}
+    section .container .user .formBox {width:100%;}
+    section .container.act .signBox .formBox {top:-100%;}
+}
+
+@media (max-width:400px) {
+    section .container .user .formBox {padding:20px;}
+}
